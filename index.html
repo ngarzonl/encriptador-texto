@@ -18,33 +18,34 @@
                 <a href="index.html"> <img src="Assets/logo3.png" alt=""></a>
             </div>
             <div class="presentacion-texto">
-                <textarea name="texto-encriptar" id="texto-encriptar">Ingrese un texto</textarea>
+                <textarea onclick="seleccionar();" name="texto-encriptar" id="texto-encriptar" placeholder="Ingrese un texto ..."></textarea>
         
             </div>
             <div class="presentacion-alerta">
                 <img src="Assets/alerta.png" alt="">
-                <p>Ingrese solo minusculas</p>
+                <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="presentacion-botones">
-                <button class="boton-encriptar"> Encriptar </button>
-                <button class="boton-desencriptar"> Desencriptar </button>
+                <button onclick="encriptar();" class="boton-encriptar" id="encriptar"> Encriptar </button>
+                <button onclick="desencriptar();" class="boton-desencriptar" id="desencriptar"> Desencriptar </button>
                 
             </div>
         </div>
         
         <div class="presentacion-texto-desencriptado">
-            <div>
-                <textarea name="texto-desencriptado" id="texto-desencriptado"></textarea>
+            <div class="presentacion-texto-desencriptado-textarea" id="divTextarea">
+                <textarea name="texto-desencriptado" id="texto-desencriptado" readonly></textarea>
             </div>
             <div>
-                <img src="Assets/img.png" >
-                <div class="presentacion-texto-desencriptado-texto">
-                    <p class="p1">Ningun mensaje fue encontrado</p>
-                    <p class="p2">Ingrese el texto que desee encriptar o desencriptar</p>
+                <img src="Assets/img.png" id="imagen-desencriptar" >
+                <div class="presentacion-texto-desencriptado-texto" id="textos">
+                    <p class="p1" >Ningun mensaje fue encontrado</p>
+                    <p class="p2" id="mensaje">Ingrese el texto que desee encriptar o desencriptar</p>
                 </div>
             </div>
+            <p id="mensaje-copiado"></p>
             <div class="presentacion-botones">
-                <button class="presentacion-boton-copiar"> Copiar </button>
+                <button onclick="copiar();" class="presentacion-boton-copiar" id="boton-copiar"> Copiar </button>
             </div>
         </div>
     </div>
